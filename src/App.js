@@ -7,17 +7,15 @@ import AddMovie from './components/AddMovie';
 
 
 const App = () => {
-  const [rating, setRating] = useState(0) // initial rating value
-
-  // Catch Rating value
-  const handleRating = (rate) => {
-    setRating(rate)
-    // other logic
+  const [film, setFilm] = useState(movies)
+  function handleFilm(newfilm) {
+    setFilm([...film,newfilm])
   }
+ 
   return (
     <div>
-      <AddMovie/>
-      <MovieList movies={movies}/>
+      <AddMovie handleFilmp={handleFilm}/>
+      <MovieList movies={film}/>
     </div>
   )
 }
