@@ -7,17 +7,17 @@ const MovieCard = ({moviep}) => {
   return (
     <div>
         
-        <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={moviep.posterURL} />
+        <Card className="card" style={{ width: '16rem' }}>
+  <Card.Img variant="top" src={moviep.posterURL} style={{height:"300px"}} />
   <Card.Body>
     <Card.Title>{moviep.title}</Card.Title>
-    <Card.Text>
+    <Card.Text className="cardtext">
       {moviep.description}
     </Card.Text>
     
   </Card.Body>
   
-      <Rating   ratingValue={moviep.rating} /* Available Props */ />
+      <Rating   ratingValue={moviep.rating} readonly={true} /* Available Props */ />
     
   
 </Card>

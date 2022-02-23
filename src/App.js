@@ -3,6 +3,7 @@ import MovieList from './components/MovieList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { movies } from './Data';
 import { Rating } from 'react-simple-star-rating'
+import AddMovie from './components/AddMovie';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
   }
   return (
     <div>
+      <AddMovie/>
       <MovieList movies={movies}/>
     </div>
   )
